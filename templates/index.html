@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diabetes Pridiction Page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<body>
+    <h2>Diabetes Pridiction</h2>
+    <div class="data">
+        <p>This Web Application is processed by a Machine Learning Algorithm to predict probability of an individual
+            having Diabetes</p>
+        <p>Note that this system is 80% accurate</p>
+        <p>Please Enter the values for the following:</p>
+    </div>
+    <div class="container">
+        <div class="vertical-div">
+            <form method="post" action="/">
+                <label for="Username">Enter your Name:</label><br>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="pregnancies">Pregnancies:</label><br>
+                <input type="text" id="pregnancies" name="pregnancies" required><br>
+
+                <label for="glucose">Glucose:</label><br>
+                <input type="text" id="glucose" name="glucose" required><br>
+
+                <label for="bloodpressure">Blood Pressure:</label><br>
+                <input type="text" id="bloodpressure" name="bloodpressure" required><br>
+
+                <label for="skinthickness">Skin Thickness:</label><br>
+                <input type="text" id="skinthickness" name="skinthickness" required><br>
+
+                <label for="insulin">Insulin:</label><br>
+                <input type="text" id="insulin" name="insulin" required><br>
+
+                <label for="age">Age:</label><br>
+                <input type="text" id="age" name="age" required><br>
+
+                <label for="bmi">BMI:</label><br>
+                <input type="text" id="bmi" name="bmi" required><br>
+
+                <label for="diabetespedigreefunction">Diabetes Pedigree Function:</label><br>
+                <input type="text" id="diabetespedigreefunction" name="diabetespedigreefunction" required><br><br>
+
+                <input type="submit" value="Predict"><br>
+            </form>
+        </div>
+        <div class="result">
+            <p>Result :</p>
+            <p>{{res}}</p>
+        </div>
+    </div>
+</body>
+
+</html>
